@@ -1,0 +1,86 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Poppins', sans-serif;
+}
+
+body {
+    color: hsl(248, 53%, 3%);
+    background-color: hsl(248, 53%, 97%);
+}
+
+section {
+    padding: 5vh 20vw;
+    text-align: left;
+    p {
+        padding: 1vh 0vw;
+    }
+}
+
+header {
+    background-color: hsl(248, 53%, 58%);
+    z-index: 10;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    padding: 1em;
+    text-align: left;
+
+    a {
+        color: hsl(248, 53%, 97%);
+        text-decoration: none;
+        font-size: 1rem;
+        padding: 0.75em 1.75em;
+        border-radius: 0.5em;
+        display: inline-block;
+        transition: background-color 0.3s ease;
+    }
+
+    a:hover {
+        background-color: hsl(248, 53%, 97%);
+        color: hsl(248, 53%, 58%);
+    }
+}
+
+footer {
+    background-color: hsl(248, 53%, 58%);
+    color: hsl(248, 53%, 97%);
+    text-align: right;
+    padding: 1em 2em;
+    position: relative;
+}
+
+/* Full-Screen Hero Section */
+.hero {
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: hsl(248, 53%, 3%);
+    color: hsl(248, 53%, 97%);
+    text-align: center;
+    position: relative;
+
+    h1 {
+        font-size: 6rem;
+        color: hsl(248, 53%, 58%);
+        text-decoration: none;
+        margin-bottom: 0.5em;
+        transition: color 0.3s ease;
+    }
+
+    p {
+        font-size: 2rem;
+        color: hsl(248, 53%, 58%);
+        text-decoration: none;
+        margin-bottom: 0.5em;
+        transition: color 0.3s ease;
+    
+        strong {
+            color: hsl(248, 53%, 97%);
+        }
+    }
+}
