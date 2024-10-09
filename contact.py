@@ -25,7 +25,7 @@ def submit_form():
     email = request.form['email']
     message = request.form['message']
 
-    if not re.match("^[A-Za-z\s]+$", full_name):
+    if not re.match(r"^[A-Za-z\s]+$", full_name):
         flash("Full name must contain only letters and spaces.")
         return redirect('/')
     

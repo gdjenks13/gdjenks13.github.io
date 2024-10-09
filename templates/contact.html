@@ -1,38 +1,16 @@
 <section id="Contact_Me">
-    <h2>Contact Me</h2>
-    <form id="contact-form" method="POST" action="/submit-form">
-        <label for="full-name">Full Name:</label>
-        <input type="text" id="full-name" name="full-name" maxlength="100" pattern="[A-Za-z\s]+" required>
-      
-        <label for="email">Email:</label>
-        <input type="email" id="email" name="email" required>
-      
-        <label for="message">Message:</label>
-        <textarea id="message" name="message" maxlength="1000" required></textarea>
-      
-        <button type="submit">Send Message</button>
-      </form>
-      
-      <script>
-        document.getElementById('contact-form').addEventListener('submit', function(event) {
-          const fullName = document.getElementById('full-name').value;
-          const email = document.getElementById('email').value;
-          const message = document.getElementById('message').value;
-      
-          if (!/^[A-Za-z\s]+$/.test(fullName)) {
-            alert('Full name must contain only letters and spaces.');
-            event.preventDefault();
-          }
-      
-          if (!/.+@.+\..+/.test(email)) {
-            alert('Invalid email format.');
-            event.preventDefault();
-          }
-      
-          if (message.length > 1000) {
-            alert('Message is too long.');
-            event.preventDefault();
-          }
-        });
-      </script>
+  <h1>Contact Me</h1>
+  <form id="contact-form" method="POST" action="/submit-form">
+    <label for="full-name">Full Name :</label>
+    <input type="text" id="full-name" name="full-name" maxlength="100" pattern="[A-Za-z\s]+" required>
+  
+    <label for="email">Email :</label>
+    <input type="email" id="email" name="email" required>
+  
+    <label for="message">Message :</label>
+    <textarea id="message" name="message" maxlength="1000" required></textarea>
+  
+    <button type="submit">Send Message</button>
+  </form>
+  <script src="../static/js/contact.js"></script>
 </section>
