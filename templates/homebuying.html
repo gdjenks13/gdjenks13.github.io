@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Buying vs Renting Comparison</title>
+    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" href="../static/css/homebuying.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <h1>Compare Home Buying and Renting</h1>
+    <div class="form-container">
+        <label for="homePrice">Home Purchase Price:</label>
+        <input type="text" id="homePrice" value="400000">
+
+        <label for="interestRate">Interest Rate (%):</label>
+        <input type="text" id="interestRate" value="5.5"><br>
+
+        <label for="downPayment">Down Payment:</label>
+        <input type="text" id="downPayment" value="80000">
+
+        <label for="propertyTax">Property Tax Rate (%):</label>
+        <input type="text" id="propertyTax" value="1.4"><br>
+
+        <label for="loanTerm">Loan Term (years):</label>
+        <select id="loanTerm">
+            <option value="10">10</option>
+            <option value="15">15</option>
+            <option value="20">20</option>
+            <option value="30">30</option>
+        </select>
+
+        <label for="homeInsurance">Home Insurance Rate (%):</label>
+        <input type="text" id="homeInsurance" value="0.4"><br>
+
+        <label for="pmi">PMI Rate (%):</label>
+        <input type="text" id="pmi" value="0.5"><br>
+
+        <label for="appreciation">Home Appreciation Rate (% per year):</label>
+        <input type="text" id="appreciation" value="2"><br>
+
+        <button onclick="calculate()">Calculate</button>
+    </div>
+
+    <h2>Results</h2>
+    <div id="results"></div>
+
+    <script src="../static/js/homebuying.js"></script>
+</body>
+</html>

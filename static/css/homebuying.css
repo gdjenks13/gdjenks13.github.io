@@ -1,0 +1,53 @@
+body {
+    margin: 1.25em;
+}
+
+.form-container {
+    margin-bottom: 1.25em;
+}
+
+label {
+    display: inline-block;
+    width: 20vw;
+    margin-bottom: 0.75rem;
+    color: hsl(248, 53%, 3%);
+}
+
+input, select {
+    padding: 0.75rem;
+    border: 0.1rem solid hsl(248, 53%, 97%);
+    border-radius: 0.25rem;
+    margin-bottom: 0.75rem;
+    width: 10%;
+    box-sizing: border-box;
+    transition: border-color 0.3s;
+}
+
+input:focus, select:focus {
+    border-color: hsl(248, 53%, 58%);
+    outline: none;
+}
+
+button {
+    display: block;
+    margin-top: 1.25em;
+    padding: 0.75em 1.25em;
+}
+
+#results {
+    margin-top: 2em;
+}
+
+table {
+    width: 50%;
+    border-collapse: collapse;
+}
+
+table, th, td {
+    border: 0.0675em solid black;
+}
+
+th, td {
+    padding: 0.25em;
+    text-align: center;
+}

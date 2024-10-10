@@ -19,6 +19,10 @@ mail = Mail(app)
 def contact_form():
     return render_template('index.html')
 
+@app.route('/homebuying')
+def homebuying():
+    return render_template('homebuying.html')
+
 @app.route('/submit-form', methods=['POST'])
 def submit_form():
     full_name = request.form['full-name']
