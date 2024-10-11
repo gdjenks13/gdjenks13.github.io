@@ -12,43 +12,82 @@
     
 </head>
 <body>
-    <h1>Compare Home Buying and Renting</h1>
+    <h1>Mortgage Calculator</h1>
     <div class="form-container">
-        <label for="homePrice">Home Purchase Price:</label>
-        <input type="text" id="homePrice" value="400000">
-
-        <label for="interestRate">Interest Rate (%):</label>
-        <input type="text" id="interestRate" value="5.5"><br>
-
-        <label for="downPayment">Down Payment:</label>
-        <input type="text" id="downPayment" value="80000">
-
-        <label for="propertyTax">Property Tax Rate (%):</label>
-        <input type="text" id="propertyTax" value="1.4"><br>
-
-        <label for="loanTerm">Loan Term (years):</label>
-        <select id="loanTerm">
-            <option value="10">10</option>
-            <option value="15">15</option>
-            <option value="20">20</option>
-            <option value="30">30</option>
-        </select>
-
-        <label for="homeInsurance">Home Insurance Rate (%):</label>
-        <input type="text" id="homeInsurance" value="0.4"><br>
-
-        <label for="pmi">PMI Rate (%):</label>
-        <input type="text" id="pmi" value="0.5"><br>
-
-        <label for="appreciation">Home Appreciation Rate (% per year):</label>
-        <input type="text" id="appreciation" value="2"><br>
-
-        <button onclick="calculate()">Calculate</button>
+        <!-- This is temporary, until the rent section is fully functioning. -->
+        <div class="rent-container" style="display: none;">
+            <h2>Rent</h2>
+            <div class="form-group">
+                <label for="rentPrice">Monthly Rent ($):</label>
+                <input type="text" id="rentPrice" value="1200">
+            </div>
+            
+            <div class="form-group">
+                <label for="rentInsurance">Rent Insurance Rate (%):</label>
+                <input type="text" id="rentInsurance" value="1.8">
+            </div>
+            <div class="form-group">
+                <label for="rentTime">Rental Time (years):</label>
+                <input type="text" id="rentTime" value="2">
+            </div>
+        </div>
+        <div class = "buy-container">
+            <h2>Buying Options</h2>
+            <div class="form-group">
+                <label for="homePrice">Home Purchase Price ($):</label>
+                <input type="text" id="homePrice" value="400000">
+                <small id="homePriceError">Invalid</small>
+            </div>
+            <div class="form-group">
+                <label for="downPayment">Down Payment ($):</label>
+                <input type="text" id="downPayment" value="80000">
+                <small id="downPaymentError">Invalid</small>
+            </div>
+            <div class="form-group">
+                <label for="loanTerm">Loan Term (years):</label>
+                <select id="loanTerm">
+                    <option value="10">10</option>
+                    <option value="15">15</option>
+                    <option value="20">20</option>
+                    <option value="30" selected>30</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label for="interestRate">Interest Rate (%):</label>
+                <input type="text" id="interestRate" value="5.5">
+                <small id="interestRateError">Invalid</small>
+            </div>
+            <div class="form-group">
+                <label for="propertyTax">Property Tax Rate (%):</label>
+                <input type="text" id="propertyTax" value="1.4">
+                <small id="propertyTaxError">Invalid</small>
+            </div>
+            <div class="form-group">
+                <label for="homeInsurance">Home Insurance Rate (%):</label>
+                <input type="text" id="homeInsurance" value="0.4">
+                <small id="homeInsuranceError">Invalid</small>
+            </div>
+            <div class="form-group">
+                <label for="pmi">PMI Rate (%):</label>
+                <input type="text" id="pmi" value="0.5">
+                <small id="pmiError">Invalid</small>
+            </div>
+            <div class="form-group">
+                <label for="appreciation">Home Appreciation Rate (%):</label>
+                <input type="text" id="appreciation" value="2">
+                <small id="appreciationError">Invalid</small>
+            </div>
+        </div>
     </div>
 
-    <h2>Results</h2>
-    <div id="results"></div>
+    <button id="calculateButton" onclick="calculate()">Calculate</button>
+    <button id="toggleDisplayByYearOrMonthButton" onclick="toggleYearlyMonthly()" style="display: none;">Show Yearly</button>
+    <button id="toggleAmortizationTableButton" onclick="toggleTableVisibility()">Hide Table</button>
 
+    <div id="results"></div>
+    <div id="amortizationTable"></div>
+
+    <script src="../static/js/validation/validation_homebuying.js"></script>
     <script src="../static/js/homebuying.js"></script>
 </body>
 </html>
