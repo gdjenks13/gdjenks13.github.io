@@ -18,4 +18,5 @@ document.addEventListener("DOMContentLoaded", () => {
     loadHTMLContent('templates/about_me.html', 'about_me');
     loadHTMLContent('templates/experience.html', 'experience');
     loadHTMLContent('templates/education.html', 'education');
+    loadHTMLContent('templates/projects.html', 'projects');
 });
