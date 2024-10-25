@@ -2,20 +2,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family:'Poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 body {
     color: hsl(248, 53%, 3%);
     background-color: hsl(248, 53%, 97%);
-}
-
-section {
-    padding: 2vh 25vw;
-    text-align: left;
-    p {
-        padding: 1vh 0vw;
-    }
+    line-height: 1.6;
 }
 
 header {
@@ -25,41 +18,61 @@ header {
     width: 100%;
     top: 0;
     left: 0;
-    padding: 1em;
+    padding: 1rem;
     text-align: left;
     transition: top 0.75s ease-in-out;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
 
-    a {
-        color: hsl(248, 53%, 97%);
-        text-decoration: none;
-        font-size: 1rem;
-        padding: 0.75em 1.75em;
-        border-radius: 0.5em;
-        display: inline-block;
-        transition: background-color 0.3s ease, color 0.3s ease;
-    }
+header a {
+    color: hsl(248, 53%, 97%);
+    text-decoration: none;
+    font-size: 1rem;
+    padding: 0.75rem 1.75rem;
+    border-radius: 0.5rem;
+    display: inline-block;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
 
-    a:hover {
-        background-color: hsl(248, 53%, 97%);
-        color: hsl(248, 53%, 58%);
-    }
+header a:hover {
+    background-color: hsl(248, 53%, 97%);
+    color: hsl(248, 53%, 58%);
 }
 
 .header-hidden {
     top: -100%;
 }
 
+@media (max-width: 768px) {
+    header {
+        padding: 0.75rem;
+        text-align: center;
+    }
+
+    header a {
+        font-size: 0.9rem;
+        padding: 0.5rem 1.5rem;
+        display: inline-block;
+        margin: 0.25rem;
+    }
+}
+
+@media (min-width: 769px) {
+    header a {
+        font-size: 1rem;
+        padding: 0.75rem 1.75rem;
+    }
+}
+
 footer {
     background-color: hsl(248, 53%, 58%);
     color: hsl(248, 53%, 97%);
     text-align: right;
-    padding: 1em 2em;
-    position: relative;
+    padding: 1rem;
 }
 
-/* Full-Screen Hero Section */
 .hero {
-    height: 105vh;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -67,86 +80,102 @@ footer {
     background-color: hsl(248, 53%, 3%);
     color: hsl(248, 53%, 97%);
     text-align: center;
-    position: relative;
-
-    h1 {
-        font-size: 6rem;
-        color: hsl(248, 53%, 58%);
-        text-decoration: none;
-        transition: color 0.3s ease;
-    }
-
-    p {
-        font-size: 2rem;
-        color: hsl(248, 53%, 97%);
-        text-decoration: none;
-        padding: 0.5em 25%;
-    }
+    padding: 2rem;
 }
 
-#contact-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 40vw;
-    margin: 0;
+.hero h1 {
+    font-size: 4.5rem;
+    color: hsl(248, 53%, 58%);
+    margin-bottom: 0.5rem;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    color: hsl(248, 53%, 97%);
+    padding: 0 20%;
+}
+
+section {
+    max-width: 50rem;
+    margin: 4rem auto;
     padding: 2rem;
     background-color: hsl(248, 53%, 97%);
-    border-radius: 0.25rem;
-    box-shadow: 0 0.25rem 0.25rem hsl(248, 53%, 3%);
+    border-radius: 0.5rem;
+    box-shadow: 0 0.25rem 0.5rem rgba(0, 0, 0, 0.1);
+    text-align: left;
 }
 
-#contact-form label {
-    margin-bottom: 0.5rem;
-    font-weight: bold;
-    color: hsl(248, 53%, 3%);
+section h1 {
+    font-size: 2.5rem; 
+    color: hsl(248, 53%, 20%);
+    margin-bottom: 1rem;
+    text-align: center;
+    font-weight: 700;
 }
 
-#contact-form input,
-#contact-form textarea {
-    padding: 0.75rem;
-    border: 0.1rem solid hsl(248, 53%, 97%);
-    border-radius: 0.25rem;
-    margin-bottom: 1.25rem; 
-    font-size: 1rem;
-    width: 100%;
-    box-sizing: border-box;
-    transition: border-color 0.3s;
+section div {
+    margin-bottom: 3rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid hsl(248, 53%, 85%);
 }
 
-#contact-form input:focus,
-#contact-form textarea:focus {
-    border-color: hsl(248, 53%, 58%);
-    outline: none;
+section h2 {
+    font-size: 1.75rem;
+    color: hsl(248, 53%, 30%);
+    font-weight: 600;
+    margin-bottom: 0.2rem;
 }
 
-#contact-form textarea {
-    height: 15vh;
-    resize: vertical;
+section h3 {
+    font-size: 1.1rem;
+    color: hsl(248, 53%, 50%);
+    font-weight: 400;
+    margin-bottom: 0.75rem;
 }
 
-#contact-form button {
-    background-color: hsl(248, 53%, 58%);
-    color: white;
-    padding: 0.75rem 1.25rem;
-    border: none;
-    border-radius: 0.25rem;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
+section p {
+    font-size: 1.1rem;
+    color: hsl(248, 53%, 15%);
+    line-height: 1.7;
+    margin-bottom: 0.75rem;
 }
 
-#contact-form button:hover {
-    background-color: hsl(248, 53%, 48%);
+section p:last-child {
+    margin-bottom: 0;
 }
 
-@media (max-width: 48rem) {
-    #contact-form {
+section div:last-child {
+    border-bottom: none;
+}
+
+@media (max-width: 768px) {
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .hero p {
+        font-size: 1.25rem;
+        padding: 0 10%;
+    }
+
+    section {
+        margin: 2rem auto;
         padding: 1.5rem;
-        max-width: 80vw;
     }
-    
-    #contact-form button {
-        font-size: 0.875rem;
+
+    section h1 {
+        font-size: 2rem;
+    }
+
+    section h2 {
+        font-size: 1.5rem;
+    }
+
+    section h3 {
+        font-size: 1rem;
+    }
+
+    section p {
+        font-size: 1rem;
     }
 }
-

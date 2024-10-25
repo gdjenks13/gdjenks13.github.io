@@ -3,31 +3,33 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="../static/css/index.css" rel="stylesheet" />
+        <link href="css/index.css" rel="stylesheet">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
         <title>Glenn Jenkins</title>
     </head>
     <body>
         <header>
-            <a href="#About_Me">About Me</a>
-            <a href="#Experience">Experience</a>
-            <a href="#Education">Education</a>
-            <a href="#Contact_Me">Contact Me</a>
-            <a href="{{ url_for('homebuying') }}">Home Buying</a>
+            <a href="#about_me">About Me</a>
+            <a href="#experience">Experience</a>
+            <a href="#education">Education</a>
         </header>  
+
         <div class="hero">
             <h1>Glenn Jenkins</h1>
             <p>Software engineer passionate about developing practical and beautiful products.</p>
         </div>
-        {% include 'about_me.html' %}
-        {% include 'experience.html' %}
-        {% include 'education.html' %}
-        {% include 'contact.html' %}
+
+        <section id="about_me"></section>
+        <section id="experience"></section>
+        <section id="education"></section>
+
         <footer>
-            <p>Last Updated on October 8th, 2024</p>
+            <p>Last Updated on October 25th, 2024</p>
         </footer>
-        <script src="../static/js/header.js"></script>
+
+        <script src="js/templating.js" defer></script>
+        <script src="js/header.js" defer></script>
     </body>
 </html>
