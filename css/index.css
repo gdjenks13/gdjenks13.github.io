@@ -26,13 +26,17 @@ header {
     background-color: var(--color-background);
     z-index: 10;
     position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     width: 100%;
-    top: 0;
-    left: 0;
     padding: 1rem;
-    text-align: left;
     transition: top 0.75s ease-in-out;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+
+    .header_right a {
+        font-size: 1.5rem;
+    }
 }
 
 header a {
@@ -45,8 +49,12 @@ header a {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-header a:hover {
+.header_left a:hover {
     background-color: var(--light-background);
+    color: var(--color-text);
+}
+
+.header_right a:hover {
     color: var(--color-text);
 }
 
@@ -78,7 +86,9 @@ header a:hover {
 footer {
     background-color: var(--color-background);
     color: var(--light-text);
-    text-align: right;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding: 1rem;
 }
 
