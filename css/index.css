@@ -33,6 +33,7 @@ header {
     padding: 1rem;
     transition: top 0.75s ease-in-out;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 
     .header_right a {
         font-size: 1.5rem;
@@ -58,8 +59,10 @@ header a {
     color: var(--color-text);
 }
 
-.header-hidden {
-    top: -100%;
+.hidden-header {
+    transform: translateY(-100%);
+    opacity: 0;
+    transition: transform 0.3s ease-in-out, opacity 0.3s ease-in-out;
 }
 
 @media (max-width: 768px) {
